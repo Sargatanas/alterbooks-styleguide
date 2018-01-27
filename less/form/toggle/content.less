@@ -1,4 +1,12 @@
+@off-toggle-textcolor: #c0c0c0;
+
 .toggle__content {
-    margin: 0 15px;
+    padding: 0 15px;
+    cursor: pointer;
     user-select: none;
+}
+
+.toggle__field[disabled] + * + .toggle__content {
+    color: @off-toggle-textcolor;
+    cursor: default;
 }

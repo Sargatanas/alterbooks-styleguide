@@ -1,5 +1,13 @@
-.checkbox__content-1 {
+@off-checkbox-textcolor: #c0c0c0;
+
+.checkbox__content {
     display: block;
-    margin-left: 40px;
+    padding: 2px 0 0 40px;
+    cursor: pointer;
     user-select: none;
+}
+
+.checkbox__field[disabled] + * + .checkbox__content {
+    color: @off-checkbox-textcolor;
+    cursor: default;
 }

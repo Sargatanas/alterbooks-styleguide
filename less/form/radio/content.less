@@ -1,4 +1,12 @@
+@off-radio-textcolor: #c0c0c0;
+
 .radio__content {
-    margin: 0 15px;
+    padding: 0 15px;
+    cursor: pointer;
     user-select: none;
+}
+
+.radio__field[disabled] + * + .radio__content {
+    color: @off-radio-textcolor;
+    cursor: default;
 }

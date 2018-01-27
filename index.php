@@ -257,20 +257,44 @@
             </div>
 
             <div class="col-xs-8 col-md-12 start-xs toggle-group">
-                <label for="toggle" class="col-xs-12 toggle">
-                    <input type="checkbox" class="toggle__field" id="toggle" name="toggle">
-                    <span class="toggle-animation">
-                        <span class="toggle-animation__button"></span>
+                <div class="col-xs-12 toggle-group__element">
+                    <label for="toggle-1" class="toggle">
+                        <input type="checkbox" class="toggle__field" id="toggle-1" name="toggle">
+                        <span class="toggle-animation">
+                            <span class="toggle-animation__button"></span>
+                        </span>
+                        <span class="toggle__content">
+                        переключатель 1
                     </span>
-                    <span class="toggle__content">
-                        переключатель
+                    </label>
+                </div>
+                <div class="col-xs-12 toggle-group__element">
+                    <label for="toggle-2" class="toggle">
+                        <input type="checkbox" class="toggle__field" id="toggle-2" name="toggle">
+                        <span class="toggle-animation">
+                            <span class="toggle-animation__button"></span>
+                        </span>
+                        <span class="toggle__content">
+                        переключатель 2
                     </span>
-                </label>
+                    </label>
+                </div>
+                <div class="col-xs-12 toggle-group__element">
+                    <label for="toggle-3" class="toggle">
+                        <input type="checkbox" class="toggle__field" id="toggle-3" name="toggle" disabled>
+                        <span class="toggle-animation">
+                            <span class="toggle-animation__button"></span>
+                        </span>
+                        <span class="toggle__content">
+                        переключатель 3
+                    </span>
+                    </label>
+                </div>
             </div>
 
 
             <div class="row col-xs-8 col-md-12 start-xs radio-group">
-                <div class="col-xs-12 start-xs radio-group__element">
+                <div class="col-xs-12 radio-group__element">
                     <label for="radio-1" class="radio">
                         <input type="radio" class="radio__field" id="radio-1" name="radio">
                         <span class="radio-animation">
@@ -281,7 +305,7 @@
                         </span>
                     </label>
                 </div>
-                <div class="col-xs-12 start-xs radio-group__element">
+                <div class="col-xs-12 radio-group__element">
                     <label for="radio-2" class="radio">
                         <input type="radio" class="radio__field" id="radio-2" name="radio">
                         <span class="radio-animation">
@@ -292,42 +316,53 @@
                         </span>
                     </label>
                 </div>
+                <div class="col-xs-12 radio-group__element">
+                    <label for="radio-3" class="radio">
+                        <input type="radio" class="radio__field" id="radio-3" name="radio" disabled>
+                        <span class="radio-animation">
+                            <span class="radio-animation__button"></span>
+                        </span>
+                        <span class="radio__content">
+                            радио-3
+                        </span>
+                    </label>
+                </div>
             </div>
 
-            <div class="row col-xs-8 col-md-12 start-xs checkbox-group-1">
-                <label for="checkbox-1-1" class="col-xs-12 middle-xs checkbox-1">
-                    <input type="checkbox" class="checkbox__field-1" id="checkbox-1-1" name="checkbox-1">
-                    <span class="checkbox-animation-1">
-                        <span class="checkbox-animation-1__button"></span>
-                        <span class="checkbox-animation-1__icon"></span>
-                        <span class="checkbox-animation-1__ripple"></span>
+            <div class="row col-xs-8 col-md-12 start-xs checkbox-group">
+                <label for="checkbox-1-1" class="col-xs-12 checkbox">
+                    <input type="checkbox" class="checkbox__field" id="checkbox-1-1" name="checkbox-1">
+                    <span class="checkbox-animation">
+                        <span class="checkbox-animation__button"></span>
+                        <span class="checkbox-animation__icon"></span>
+                        <span class="checkbox-animation__ripple"></span>
                     </span>
-                    <span class="checkbox__content-1">
-                        чекбокс 1-1
-                    </span>
-                </label>
-
-                <label for="checkbox-1-2" class="col-xs-12 middle-xs checkbox-1">
-                    <input type="checkbox" class="checkbox__field-1" id="checkbox-1-2" name="checkbox-1">
-                    <span class="checkbox-animation-1">
-                        <span class="checkbox-animation-1__button"></span>
-                        <span class="checkbox-animation-1__icon"></span>
-                        <span class="checkbox-animation-1__ripple"></span>
-                    </span>
-                    <span class="checkbox__content-1">
-                        чекбокс 1-2
+                    <span class="checkbox__content">
+                        чекбокс 1
                     </span>
                 </label>
 
-                <label for="checkbox-1-3" class="col-xs-12 middle-xs checkbox-1">
-                    <input type="checkbox" class="checkbox__field-1" id="checkbox-1-3" name="checkbox-1">
-                    <span class="checkbox-animation-1">
-                        <span class="checkbox-animation-1__button"></span>
-                        <span class="checkbox-animation-1__icon"></span>
-                        <span class="checkbox-animation-1__ripple"></span>
+                <label for="checkbox-1-2" class="col-xs-12 checkbox">
+                    <input type="checkbox" class="checkbox__field" id="checkbox-1-2" name="checkbox-1">
+                    <span class="checkbox-animation">
+                        <span class="checkbox-animation__button"></span>
+                        <span class="checkbox-animation__icon"></span>
+                        <span class="checkbox-animation__ripple"></span>
                     </span>
-                    <span class="checkbox__content-1">
-                        чекбокс 1-3
+                    <span class="checkbox__content">
+                        чекбокс 2
+                    </span>
+                </label>
+
+                <label for="checkbox-1-3" class="col-xs-12 checkbox">
+                    <input type="checkbox" class="checkbox__field" id="checkbox-1-3" name="checkbox-1" disabled>
+                    <span class="checkbox-animation">
+                        <span class="checkbox-animation__button"></span>
+                        <span class="checkbox-animation__icon"></span>
+                        <span class="checkbox-animation__ripple"></span>
+                    </span>
+                    <span class="checkbox__content">
+                        чекбокс 3
                     </span>
                 </label>
             </div>

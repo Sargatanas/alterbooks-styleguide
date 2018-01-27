@@ -1,7 +1,7 @@
 @radio-size: 20px;
 @radio-button-size: 10px;
-@off-color-radio: lightgrey;
-@on-color-radio: #7aca4a;
+@off-radio-color: #d3d3d3;
+@on-radio-color: #7aca4a;
 
 .radio-animation {
     position: relative;
@@ -12,8 +12,10 @@
     height: @radio-size;
 
     border-radius: 50%;
-    border: 2px solid @off-color-radio;
+    border: 2px solid @off-radio-color;
     background: white;
+
+    cursor: pointer;
 
     &__button {
         position: absolute;
@@ -36,17 +38,25 @@
 
 
 .radio__field:checked + .radio-animation {
-    border-color: @on-color-radio;
-    background: @on-color-radio;
+    border-color: @on-radio-color;
+    background: @on-radio-color;
 
     animation-name: rippleRadioOn;
     animation-duration: 0.6s;
     animation-fill-mode: backwards;
 }
-
+.radio__field[disabled] + .radio-animation {
+    border-color: @off-radio-color;
+    background: @off-radio-color;
+    opacity: 0.6;
+    pointer-events: none;
+}
 .radio__field:checked + .radio-animation > .radio-animation__button {
     transform: translate3d(0, 0, 0) scale(1);
     transition-duration: 0.4s;
+}
+.radio__field[disabled] + .radio-animation > .radio-animation__button {
+    transform: translate3d(0, 0, 0) scale(1);
 }
 
 
