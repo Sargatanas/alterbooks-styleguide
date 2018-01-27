@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>StyleGuide</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
 </head>
 <body class="body">
 <header></header>
@@ -90,7 +91,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12">
+            <div class="col-xs-12 col-md-12">
                 <p class="text__paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin lacinia leo vitae leo ultricies,
                     mollis sollicitudin leo imperdiet. Aenean ligula libero, pulvinar eget mi at, efficitur condimentum
