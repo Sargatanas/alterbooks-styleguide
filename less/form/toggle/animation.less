@@ -1,0 +1,82 @@
+@toggle-width: 50px;
+@toggle-height: 30px;
+@toggle-size: 4px;
+@off-color-toggle: lightgrey;
+@on-color-toggle: #7aca4a;
+
+.toggle-animation {
+    position: relative;
+    display: block;
+
+    width: @toggle-width;
+    height: @toggle-height;
+
+    border-radius: @toggle-height / 2;
+    background: @off-color-toggle;
+
+    transition-duration: 0.2s;
+
+    &__button {
+        position: absolute;
+
+        display: block;
+
+        width: @toggle-height - @toggle-size * 2;
+        height: @toggle-height - @toggle-size * 2;
+
+        margin-top: @toggle-size;
+        margin-left: @toggle-size;
+
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+
+        transition-duration: 0.4s;
+    }
+}
+
+
+
+.toggle__field:checked + .toggle-animation {
+    background: @on-color-toggle;
+}
+
+.toggle__field:checked + .toggle-animation > .toggle-animation__button,
+.toggle__field:not(:checked) + .toggle-animation > .toggle-animation__button {
+    animation-duration: 0.6s;
+    animation-fill-mode: backwards;
+}
+
+.toggle__field:checked + .toggle-animation > .toggle-animation__button {
+    margin-left: @toggle-width - @toggle-height + @toggle-size;
+    transition-duration: 0.4s;
+    animation-name: rippleToggleOn;
+}
+
+.toggle__field:not(:checked) + .toggle-animation > .toggle-animation__button {
+    transition-duration: 0.4s;
+    animation-name: rippleToggleOff;
+}
+
+
+
+
+@keyframes rippleToggleOn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes rippleToggleOff {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}

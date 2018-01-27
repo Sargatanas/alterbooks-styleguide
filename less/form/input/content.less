@@ -1,0 +1,20 @@
+.input__label-content {
+    position: relative;
+    top: 0;
+
+    display: block;
+
+    width: 100%;
+
+    padding: 10px 0;
+
+    font-size: 14px;
+
+    transition: cubic-bezier(0, 0, 1, 1) 0.4s;
+}
+
+.input__field:focus + .input__label-content,
+.input--filled .input__label-content {
+    top: -40px;
+    transition: cubic-bezier(0, 0, 1, 1) 0.3s;
+}

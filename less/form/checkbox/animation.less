@@ -1,0 +1,144 @@
+@checkbox-1-size: 18px;
+@off-color-checkbox: lightgrey;
+@on-color-checkbox: #7aca4a;
+
+.checkbox-animation-1 {
+    position: relative;
+    display: block;
+
+    &__button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        z-index: 0;
+
+        width: @checkbox-1-size;
+        height: @checkbox-1-size;
+
+        border: 2px solid @off-color-checkbox;
+        border-radius: @checkbox-1-size / 10 + 1px;
+        background: white;
+    }
+
+    &__icon {
+        position: absolute;
+        display: block;
+
+        background: transparent;
+
+        cursor: pointer;
+        transition: all 250ms cubic-bezier(.4, .0, .23, 1);
+    }
+
+    &__ripple {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+
+        display: block;
+        z-index: -2;
+
+        width: @checkbox-1-size;
+        height: @checkbox-1-size;
+
+        border-radius: 50%;
+        background: white;
+    }
+}
+
+.checkbox__field-1:checked + .checkbox-animation-1 > .checkbox-animation-1__button {
+    animation-name: checkBackgroundOn;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+.checkbox__field-1:not(:checked) + .checkbox-animation-1 > .checkbox-animation-1__button {
+    animation-name: checkBackgroundOff;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+.checkbox__field-1:checked + .checkbox-animation-1 > .checkbox-animation-1__icon::before {
+    content: "";
+    position: absolute;
+    top: .6em;
+    left: .2em;
+
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    transform: rotate(45deg);
+    transform-origin: 0 100%;
+    animation: checkIcon 125ms 250ms cubic-bezier(.3, .0, .23, 1) forwards;
+}
+
+.checkbox__field-1:checked + .checkbox-animation-1 > .checkbox-animation-1__ripple {
+    animation-name: rippleCheckOn;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+.checkbox__field-1:not(:checked) + .checkbox-animation-1 > .checkbox-animation-1__ripple {
+    animation-name: rippleCheckOff;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes checkBackgroundOn {
+    0% {
+        border-color: @off-color-checkbox;
+        box-shadow: 0 0 0 0 @off-color-checkbox inset;
+    }
+    100% {
+        border-color: @on-color-checkbox;
+        box-shadow: 0 0 0 10px @on-color-checkbox inset;
+    }
+}
+@keyframes checkBackgroundOff {
+    0% {
+        border-color: @on-color-checkbox;
+        box-shadow: 0 0 0 10px @off-color-checkbox inset;
+    }
+    100% {
+        border-color: @off-color-checkbox;
+        box-shadow: 0 0 0 0 @off-color-checkbox inset;
+    }
+}
+
+@keyframes rippleCheckOn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+    }
+}
+@keyframes rippleCheckOff {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes checkIcon {
+    0% {
+        width: 0;
+        height: 0;
+        border-color: white;
+        transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    33% {
+        width: 5px;
+        height: 0;
+        transform: translate3d(0, 0, 0) rotate(45deg);
+    }
+    100% {
+        width: 5px;
+        height: 12px;
+        border-color: white;
+        transform: translate3d(0, -12px, 0) rotate(45deg);
+    }
+}

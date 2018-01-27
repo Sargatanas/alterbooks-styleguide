@@ -1,0 +1,51 @@
+.text__paragraph {
+    margin: 0 0 1em 0;
+
+    font-size: 16px;
+    line-height: 1.5em;
+    word-wrap: break-word;
+
+    &_s {
+        font-size: 14px;
+    }
+
+    &_m {
+        font-size: 24px;
+    }
+
+    &_l {
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 600px) {
+        font-size: 14px;
+
+        &_s {
+            font-size: 12px;
+        }
+
+        &_m {
+            font-size: 20px;
+        }
+
+        &_l {
+            font-size: 28px;
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        font-size: 14px;
+
+        &_s {
+            font-size: 12px;
+        }
+
+        &_m {
+            font-size: 20px;
+        }
+
+        &_l {
+            font-size: 28px;
+        }
+    }
+}
