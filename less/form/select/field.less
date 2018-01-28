@@ -1,0 +1,26 @@
+@select-height: 40px;
+@off-select-color: #d3d3d3;
+@on-select-color: #7aca4a;
+
+.select__field {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: block;
+
+    width: 100%;
+    height: @select-height;
+
+    padding-left: 10px;
+
+    outline: none;
+    border: 2px solid @off-select-color;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    &[disabled] {
+        opacity: 0.6;
+        cursor: default;
+    }
+}

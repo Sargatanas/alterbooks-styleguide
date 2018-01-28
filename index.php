@@ -292,7 +292,6 @@
                 </div>
             </div>
 
-
             <div class="row col-xs-8 col-md-12 start-xs radio-group">
                 <div class="col-xs-12 radio-group__element">
                     <label for="radio-1" class="radio">
@@ -367,9 +366,60 @@
                 </label>
             </div>
 
-            <div class="col-xs-8 col-md-12 submit">
-                <input type="submit" class="button">
+            <div class="row col-xs-8 col-md-12 sr-group">
+                <div class="col-xs-12 sr-group__element">
+                    <input type="submit" class="button">
+                </div>
+                <div class="col-xs-12 sr-group__element">
+                    <input type="reset" class="button">
+                </div>
             </div>
+
+            <div class="row col-xs-8 col-md-12 start-xs select-group">
+                <div class="select">
+                    <label for="select-1" class="select__label">
+                        Селектор 1
+                    </label>
+                    <div class="col-xs-12">
+                        <select id="select-1" name="select" class="select__field" disabled>
+                            <option value="1">
+                                пункт 1
+                            </option>
+                            <option value="2">
+                                пункт 2
+                            </option>
+                            <option value="3">
+                                пункт 3
+                            </option>
+                            <option value="4">
+                                пункт 4
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="select">
+                    <label for="select-2" class="select__label">
+                        Селектор 2
+                    </label>
+                    <div class="col-xs-12">
+                        <select id="select-2" name="select" class="select__field">
+                            <option value="1">
+                                пункт 1
+                            </option>
+                            <option value="2">
+                                пункт 2
+                            </option>
+                            <option value="3">
+                                пункт 3
+                            </option>
+                            <option value="4">
+                                пункт 4
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
         </form>
 
         <div class="row">

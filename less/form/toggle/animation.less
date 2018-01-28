@@ -56,10 +56,10 @@
     transition-duration: 0.4s;
     animation-name: rippleToggleOn;
 }
-.toggle__field:not(:checked) + .toggle-animation > .toggle-animation__button {
-    transition-duration: 0.4s;
-    animation-name: rippleToggleOff;
-}
+//.toggle__field:not(:checked) + .toggle-animation > .toggle-animation__button {
+//    transition-duration: 0.4s;
+//    animation-name: rippleToggleOff;
+//}
 .toggle__field[disabled] + .toggle-animation > .toggle-animation__button {
     animation: none;
 }
@@ -75,13 +75,13 @@
         box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
     }
 }
-
-@keyframes rippleToggleOff {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
-    }
-
-    100% {
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-    }
-}
+//
+//@keyframes rippleToggleOff {
+//    0% {
+//        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+//    }
+//
+//    100% {
+//        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+//    }
+//}
