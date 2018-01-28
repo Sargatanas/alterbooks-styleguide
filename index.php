@@ -366,15 +366,6 @@
                 </label>
             </div>
 
-            <div class="row col-xs-8 col-md-12 sr-group">
-                <div class="col-xs-12 sr-group__element">
-                    <input type="submit" class="button">
-                </div>
-                <div class="col-xs-12 sr-group__element">
-                    <input type="reset" class="button">
-                </div>
-            </div>
-
             <div class="row col-xs-8 col-md-12 start-xs select-group">
                 <div class="select">
                     <label for="select-1" class="select__label">
@@ -417,6 +408,15 @@
                             </option>
                         </select>
                     </div>
+                </div>
+            </div>
+
+            <div class="row col-xs-8 col-md-12 sr-group">
+                <div class="col-xs-12 sr-group__element">
+                    <input type="submit" class="button">
+                </div>
+                <div class="col-xs-12 sr-group__element">
+                    <input type="reset" class="button">
                 </div>
             </div>
 
