@@ -9,7 +9,7 @@
     display: block;
 
     width: 100%;
-    height: @select-height;
+    min-height: @select-height;
 
     padding-left: 10px;
 
@@ -23,4 +23,10 @@
         opacity: 0.6;
         cursor: default;
     }
+}
+
+.select__element {
+    display: flex;
+    align-items: center;
+    height: @select-height - 10px;
 }

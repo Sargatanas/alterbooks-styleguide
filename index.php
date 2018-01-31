@@ -256,7 +256,7 @@
                 <input type="password" class="input__field" id="input-5" name="input-5">
             </div>
 
-            <div class="col-xs-8 col-md-12 start-xs toggle-group">
+            <div class="col-xs-8 col-md-12 start-xs form__element">
                 <div class="col-xs-12 toggle-group__element">
                     <label for="toggle-1" class="toggle">
                         <input type="checkbox" class="toggle__field" id="toggle-1" name="toggle">
@@ -292,7 +292,7 @@
                 </div>
             </div>
 
-            <div class="row col-xs-8 col-md-12 start-xs radio-group">
+            <div class="row col-xs-8 col-md-12 start-xs form__element">
                 <div class="col-xs-12 radio-group__element">
                     <label for="radio-1" class="radio">
                         <input type="radio" class="radio__field" id="radio-1" name="radio">
@@ -328,7 +328,7 @@
                 </div>
             </div>
 
-            <div class="row col-xs-8 col-md-12 start-xs checkbox-group">
+            <div class="row col-xs-8 col-md-12 start-xs form__element">
                 <label for="checkbox-1-1" class="col-xs-12 checkbox">
                     <input type="checkbox" class="checkbox__field" id="checkbox-1-1" name="checkbox-1">
                     <span class="checkbox-animation">
@@ -366,48 +366,78 @@
                 </label>
             </div>
 
-            <div class="row col-xs-8 col-md-12 start-xs select-group">
+            <div class="row col-xs-8 col-md-12 start-xs form__element">
                 <div class="select">
-                    <label for="select-1" class="select__label">
+                    <label for="select-1" class="select-textarea__label">
                         Селектор 1
                     </label>
                     <div class="col-xs-12">
-                        <select id="select-1" name="select" class="select__field" disabled>
-                            <option value="1">
+                        <select id="select-1" name="select-1" class="select__field" disabled>
+                            <option class="select__element" value="1">
                                 пункт 1
                             </option>
-                            <option value="2">
+                            <option class="select__element" value="2">
                                 пункт 2
                             </option>
-                            <option value="3">
+                            <option class="select__element" value="3">
                                 пункт 3
                             </option>
-                            <option value="4">
+                            <option class="select__element" value="4">
                                 пункт 4
                             </option>
                         </select>
                     </div>
                 </div>
                 <div class="select">
-                    <label for="select-2" class="select__label">
+                    <label for="select-2" class="select-textarea__label">
                         Селектор 2
                     </label>
                     <div class="col-xs-12">
-                        <select id="select-2" name="select" class="select__field">
-                            <option value="1">
+                        <select id="select-2" name="select-2" class="select__field">
+                            <option class="select__element" value="1">
                                 пункт 1
                             </option>
-                            <option value="2">
+                            <option class="select__element" value="2">
                                 пункт 2
                             </option>
-                            <option value="3">
+                            <option class="select__element" value="3">
                                 пункт 3
                             </option>
-                            <option value="4">
+                            <option class="select__element" value="4">
                                 пункт 4
                             </option>
                         </select>
                     </div>
+                </div>
+                <div class="select">
+                    <label for="select-3" class="select-textarea__label">
+                        Селектор 3
+                    </label>
+                    <div class="col-xs-12">
+                        <select id="select-3" name="select-3" class="select__field" size="4" multiple>
+                            <option class="select__element" value="1">
+                                пункт 1
+                            </option>
+                            <option class="select__element" value="2">
+                                пункт 2
+                            </option>
+                            <option class="select__element" value="3">
+                                пункт 3
+                            </option>
+                            <option class="select__element" value="4">
+                                пункт 4
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row col-xs-8 col-md-12 start-xs form__element">
+                <label for="textarea-1" class="select-textarea__label">
+                    Многострочное поле ввода
+                </label>
+                <div class="col-xs-12">
+                    <textarea id="textarea-1" name="textarea-1" class="textarea"></textarea>
                 </div>
             </div>
 
