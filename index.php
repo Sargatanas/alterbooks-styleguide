@@ -451,7 +451,9 @@
             </div>
 
         </form>
+    </div>
 
+    <div class="container">
         <div class="row">
             <div class="col-xs-12 center-xs">
                 <div class="text__header text__header_1">
@@ -477,6 +479,81 @@
                 <button class="button button_red" data-color="light">
                     <span>Кнопка</span>
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 center-xs">
+                <div class="text__header text__header_1">
+                    Списки и меню
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6 col-md-12 start-xs">
+                <p class="text__header text__header_2">
+                    Нумерованный список
+                </p>
+                <ol class="list list__ordered">
+                    <li class="list__element">
+                        Первый пункт
+                    </li>
+                    <li class="list__element">
+                        Второй пункт
+                    </li>
+                    <li class="list__element list__element_inner">
+                        Третий пункт
+                        <ol class="list list__ordered list_inner">
+                            <li class="list__element list__element_inner">
+                                Подпункт три-один
+                                <ol class="list list__ordered list_inner">
+                                    <li class="list__element">Подпункт три-один-один</li>
+                                    <li class="list__element">Подпункт три-один-два</li>
+                                </ol>
+                            </li>
+                            <li class="list__element">
+                                Подпункт три-два
+                            </li>
+                            <li class="list__element">Подпункт три-три</li>
+                        </ol>
+                    </li>
+                    <li class="list__element">
+                        Четвертый пункт
+                    </li>
+                </ol>
+            </div>
+
+            <div class="col-xs-6 col-md-12 start-xs">
+                <p class="text__header text__header_2">
+                    Ненумерованный список
+                </p>
+                <ul class="list list__unordered">
+                    <li class="list__element">
+                        Первый пункт
+                    </li>
+                    <li class="list__element">
+                        Второй пункт
+                    </li>
+                    <li class="list__element list__element_inner">
+                        Третий пункт
+                        <ul class="list list__unordered list_inner">
+                            <li class="list__element">Подпункт три-один</li>
+                            <li class="list__element list__element_inner">
+                                Подпункт три-два
+                                <ul class="list list__unordered list_inner">
+                                    <li class="list__element">Подпункт три-два-один</li>
+                                    <li class="list__element">Подпункт три-два-два</li>
+                                </ul>
+                            </li>
+                            <li class="list__element">Подпункт три-три</li>
+                        </ul>
+                    </li>
+                    <li class="list__element">
+                        Четвертый пункт
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

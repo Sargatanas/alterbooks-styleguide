@@ -6,4 +6,20 @@
     &:last-of-type {
         margin-bottom: 0;
     }
+
+    &__element {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        height: @select-height - 10px;
+
+        &:first-child {
+            margin-top: 5px;
+        }
+
+        &:last-child {
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+    }
 }

@@ -1,0 +1,38 @@
+.list {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    padding: 0;
+    counter-reset: li;
+
+    &_inner {
+        margin:10px 0 0 20px;
+    }
+
+    &__element {
+        padding: 10px 5px;
+
+        &_inner {
+            padding-bottom: 0;
+        }
+    }
+
+
+    &__unordered {
+        list-style-position: inside;
+
+        & > .list__element {
+            list-style-type: circle;
+        }
+    }
+
+    &__ordered {
+        list-style: none;
+        counter-reset: li;
+
+        & > .list__element:before {
+            counter-increment: li;
+            content: counters(li,".") ". ";
+        }
+    }
+}

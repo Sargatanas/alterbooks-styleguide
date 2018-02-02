@@ -1374,6 +1374,19 @@ form {
 .select:last-of-type {
   margin-bottom: 0;
 }
+.select__element {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  height: 30px;
+}
+.select__element:first-child {
+  margin-top: 5px;
+}
+.select__element:last-child {
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
 .select-textarea__label {
   display: block;
   margin-bottom: 15px;
@@ -1399,17 +1412,13 @@ form {
   opacity: 0.6;
   cursor: default;
 }
-.select__element {
-  display: flex;
-  align-items: center;
-  height: 30px;
-}
 .textarea {
   display: block;
   max-width: 100%;
   min-width: 100%;
   box-sizing: border-box;
   padding: 10px;
+  border: 2px solid #d3d3d3;
   font-family: "Verdana", "Geneva CY", "DejaVu Sans", sans-serif;
 }
 .sr-group {
@@ -1420,6 +1429,36 @@ form {
 }
 .sr-group__element:last-child {
   margin-bottom: 0;
+}
+.list {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  padding: 0;
+  counter-reset: li;
+}
+.list_inner {
+  margin: 10px 0 0 20px;
+}
+.list__element {
+  padding: 10px 5px;
+}
+.list__element_inner {
+  padding-bottom: 0;
+}
+.list__unordered {
+  list-style-position: inside;
+}
+.list__unordered > .list__element {
+  list-style-type: circle;
+}
+.list__ordered {
+  list-style: none;
+  counter-reset: li;
+}
+.list__ordered > .list__element:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
 }
 .local-main {
   display: flex;
