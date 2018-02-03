@@ -561,7 +561,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 center-xs">
-                <div class="text__header text__header_1">
+                <div class="text__header text__header_2">
                     Горизонтальное меню с 2-6 пунктами
                 </div>
             </div>
@@ -670,12 +670,126 @@
         </div>
     </div>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 center-xs">
+                <div class="text__header text__header_2">
+                    Вертикальное меню 1-&#8734;
+                </div>
+            </div>
+        </div>
+        <div class="row center-xs">
+            <div class="col-xs-3 col-lg-12">
+                <ul class="menu menu-v menu-v_bordered">
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 1</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href menu-element__href_selected" href="#">Кнопка 2</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 3</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-3 col-lg-12">
+                <ul class="menu menu-v">
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 1</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 2</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href menu-element__href_selected" href="#">Кнопка 3</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 4</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 5</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-4 col-lg-12">
+                <ul class="menu menu-v menu-v_bordered">
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href " href="#">Кнопка 1</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 2</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element menu-v__element_inner">
+                        <a class="menu-element__href menu-element__href_inner">Кнопка 3</a>
+                        <span class="menu__underline"></span>
+                        <span class="menu__arrow"></span>
+                        <ul class="menu menu-v menu-v_inner">
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href" href="#">Кнопка 3.1</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href" href="#">Кнопка 3.2</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href" href="#">Кнопка 3.2</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href" href="#">Кнопка 3.2</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 4</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 5</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                    <li class="menu-element menu-v__element menu-v__element_inner">
+                        <a class="menu-element__href menu-element__href_inner">Кнопка 6</a>
+                        <span class="menu__underline"></span>
+                        <span class="menu__arrow"></span>
+                        <ul class="menu menu-v menu-v_inner">
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href menu-element__href_selected" href="#">Кнопка 6.1</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                            <li class="menu-element menu-v__element">
+                                <a class="menu-element__href" href="#">Кнопка 6.2</a>
+                                <span class="menu__underline"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-element menu-v__element">
+                        <a class="menu-element__href" href="#">Кнопка 7</a>
+                        <span class="menu__underline"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 </main>
 
 <footer></footer>
 
 <script src="js/ripple.js"></script>
 <script src="js/input.js"></script>
-<script src="js/h-menu.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

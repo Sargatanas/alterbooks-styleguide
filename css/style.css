@@ -1469,6 +1469,7 @@ form {
 .menu-element {
   position: relative;
   list-style: none;
+  cursor: pointer;
 }
 .menu-element__href {
   display: flex;
@@ -1478,7 +1479,6 @@ form {
   min-height: 35px;
   box-sizing: border-box;
   padding: 0 10px;
-  background: white;
   border-radius: 2px;
   text-decoration: none;
   color: black;
@@ -1501,6 +1501,7 @@ form {
 .menu__underline:after {
   content: "";
   position: absolute;
+  z-index: 200;
   bottom: 0;
   width: 0;
   height: 2px;
@@ -1535,6 +1536,23 @@ form {
 .menu-element__href_selected:hover + .menu__underline:after,
 .menu-element__href_selected:active + .menu__underline:after {
   width: 0;
+}
+.menu__arrow {
+  position: absolute;
+  top: 15px;
+  right: 10%;
+  z-index: -1;
+  width: 0;
+  margin: 0 auto;
+  border: 10px solid transparent;
+  border-top-color: rgba(211, 211, 211, 0.5);
+  border-bottom: 0;
+  transition-duration: 0.3s;
+}
+.menu-element__href:hover + * + .menu__arrow,
+.menu-element__href:active + .menu__arrow {
+  border-top-color: #a5de96;
+  transition-duration: 0.3s;
 }
 .menu-h {
   flex-direction: row;
@@ -1571,6 +1589,65 @@ form {
   height: 20px;
   background: lightgrey;
   list-style: none;
+}
+.menu-v {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.menu-v__element {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.menu-v__element:last-child {
+  margin-bottom: 0;
+}
+.menu-v__element:before {
+  content: "";
+  position: absolute;
+  z-index: 100;
+  left: 10%;
+  bottom: 0;
+  width: 80%;
+  border-bottom: 2px solid rgba(211, 211, 211, 0.4);
+}
+.menu-v__element:last-child:before {
+  width: 0;
+}
+.menu-v__element_inner {
+  flex-direction: column;
+}
+.menu-v_bordered {
+  box-sizing: border-box;
+  border: 2px solid rgba(211, 211, 211, 0.2);
+  border-radius: 10px;
+}
+.menu-v_inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background: white;
+  border: 2px solid rgba(211, 211, 211, 0);
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+.menu-element__href_active ~ .menu-v_inner {
+  height: 150px;
+  padding: 10px;
+  border-color: rgba(211, 211, 211, 0.4);
+  transition-duration: 0.4s;
+}
+.menu-element__href_active:hover ~ .menu-v_inner {
+  border-color: rgba(165, 222, 150, 0.7);
 }
 .local-main {
   display: flex;

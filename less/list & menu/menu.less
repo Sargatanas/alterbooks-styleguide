@@ -7,6 +7,7 @@
     &-element {
         position: relative;
         list-style: none;
+        cursor: pointer;
 
         &__href {
             display: flex;
@@ -19,7 +20,6 @@
 
             padding: 0 10px;
 
-            background: white;
             border-radius: 2px;
 
             text-decoration: none;
@@ -50,11 +50,12 @@
         &:after {
             content: "";
             position: absolute;
+            z-index: 200;
             bottom: 0;
             width: 0;
             height: 2px;
             margin: 0;
-            background: rgb(165, 222, 150);
+            background: #a5de96;
             transition-duration: 0.3s;
         }
 
@@ -90,6 +91,29 @@
     &-element__href_selected:hover + &__underline:after,
     &-element__href_selected:active + &__underline:after {
         width: 0;
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 15px;
+        right: 10%;
+        z-index: -1;
+
+        width: 0;
+
+        margin: 0 auto;
+
+        border: 10px solid transparent;
+        border-top-color: rgba(211, 211, 211, 0.5);
+        border-bottom: 0;
+
+        transition-duration: 0.3s;
+    }
+
+    &-element__href:hover + * + &__arrow,
+    &-element__href:active + &__arrow {
+        border-top-color: #a5de96;
+        transition-duration: 0.3s;
     }
 }
 
