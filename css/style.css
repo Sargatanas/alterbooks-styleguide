@@ -1553,6 +1553,7 @@ form {
   content: "";
   position: absolute;
   left: -2px;
+  top: 7px;
   width: 2px;
   height: 20px;
   background: lightgrey;

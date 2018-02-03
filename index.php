@@ -658,7 +658,7 @@
                         <span class="menu__underline"></span>
                     </li>
                     <li class="menu-element menu-h__element">
-                        <a class="menu-element__href" href="">Кнопка 6</a>
+                        <a class="menu-element__href" href="">Кнопка 5</a>
                         <span class="menu__underline"></span>
                     </li>
                     <li class="menu-element menu-h__element">
