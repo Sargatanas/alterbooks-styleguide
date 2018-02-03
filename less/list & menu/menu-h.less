@@ -1,0 +1,40 @@
+.menu-h {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &__element {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        margin-bottom: 10px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: -2px;
+            width: 2px;
+            height: 20px;
+            background: lightgrey;
+        }
+
+        &:first-child:before {
+            width: 0;
+            height: 0;
+        }
+
+        &_wrap:before {
+            background: transparent;
+        }
+    }
+
+    &__break-line {
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: lightgrey;
+        list-style: none;
+    }
+}

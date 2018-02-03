@@ -1,0 +1,96 @@
+.menu {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &-element {
+        position: relative;
+        list-style: none;
+
+        &__href {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            min-height: 35px;
+            box-sizing: border-box;
+
+            padding: 0 10px;
+
+            background: white;
+            border-radius: 2px;
+
+            text-decoration: none;
+            color: black;
+
+            transition-duration: 0.2s;
+
+            &:hover,
+            &:active {
+                color: #2ca811;
+                transition-duration: 0.2s;
+            }
+
+            &_selected {
+                background: rgba(0, 0, 0, 0.03);
+                color: rgba(0, 0, 0, 0.5);
+                cursor: default;
+
+                &:hover {
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    &__underline {
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            margin: 0;
+            background: rgb(165, 222, 150);
+            transition-duration: 0.3s;
+        }
+
+        &:before {
+            left: 50%;
+        }
+
+        &:after {
+            right: 50%;
+        }
+    }
+
+    &-element__href:hover + &__underline:before,
+    &-element__href:active + &__underline:before {
+        left: 0;
+        width: 50%;
+        margin-left: 10%;
+        transition-duration: 0.3s;
+    }
+
+    &-element__href:hover + &__underline:after,
+    &-element__href:active + &__underline:after {
+        right: 0;
+        width: 50%;
+        margin-right: 10%;
+        transition-duration: 0.3s;
+    }
+
+    &-element__href_selected + &__underline:before,
+    &-element__href_selected:hover + &__underline:before,
+    &-element__href_selected:active + &__underline:before,
+    &-element__href_selected + &__underline:after,
+    &-element__href_selected:hover + &__underline:after,
+    &-element__href_selected:active + &__underline:after {
+        width: 0;
+    }
+}
+
+

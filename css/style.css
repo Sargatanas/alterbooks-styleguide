@@ -1460,6 +1460,117 @@ form {
   counter-increment: li;
   content: counters(li, ".") ". ";
 }
+.menu {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.menu-element {
+  position: relative;
+  list-style: none;
+}
+.menu-element__href {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 35px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  background: white;
+  border-radius: 2px;
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.2s;
+}
+.menu-element__href:hover,
+.menu-element__href:active {
+  color: #2ca811;
+  transition-duration: 0.2s;
+}
+.menu-element__href_selected {
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+.menu-element__href_selected:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+.menu__underline:before,
+.menu__underline:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  margin: 0;
+  background: #a5de96;
+  transition-duration: 0.3s;
+}
+.menu__underline:before {
+  left: 50%;
+}
+.menu__underline:after {
+  right: 50%;
+}
+.menu-element__href:hover + .menu__underline:before,
+.menu-element__href:active + .menu__underline:before {
+  left: 0;
+  width: 50%;
+  margin-left: 10%;
+  transition-duration: 0.3s;
+}
+.menu-element__href:hover + .menu__underline:after,
+.menu-element__href:active + .menu__underline:after {
+  right: 0;
+  width: 50%;
+  margin-right: 10%;
+  transition-duration: 0.3s;
+}
+.menu-element__href_selected + .menu__underline:before,
+.menu-element__href_selected:hover + .menu__underline:before,
+.menu-element__href_selected:active + .menu__underline:before,
+.menu-element__href_selected + .menu__underline:after,
+.menu-element__href_selected:hover + .menu__underline:after,
+.menu-element__href_selected:active + .menu__underline:after {
+  width: 0;
+}
+.menu-h {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.menu-h__element {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  margin-bottom: 10px;
+}
+.menu-h__element:before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  width: 2px;
+  height: 20px;
+  background: lightgrey;
+}
+.menu-h__element:first-child:before {
+  width: 0;
+  height: 0;
+}
+.menu-h__element_wrap:before {
+  background: transparent;
+}
+.menu-h__break-line {
+  display: block;
+  width: 2px;
+  height: 20px;
+  background: lightgrey;
+  list-style: none;
+}
 .local-main {
   display: flex;
   flex-direction: column;
