@@ -1,7 +1,7 @@
 let container = document.getElementsByClassName('menu-h');
 
-window.onresize = breakLine();
-document.body.onload = breakLine();
+window.addEventListener("resize", breakLine(), false);
+window.addEventListener("orientationchange", breakLine(), false);
 
 function breakLine() {
     Array.prototype.forEach.call(container, function (c) {
