@@ -2,8 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Verdana", "Geneva CY", "DejaVu Sans", sans-serif;
-  transform: translate3d(0, 0, 0);
-  transform-style: preserve-3d;
 }
 form {
   display: flex;
@@ -1818,6 +1816,100 @@ form {
   }
   75% {
     transform: translate(0, -45px);
+  }
+}
+.modal {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  visibility: hidden;
+  width: 100vw;
+  height: 100vh;
+  transition-duration: 0.3s;
+}
+.modal__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100%;
+  height: 100%;
+  background: rgba(47, 47, 47, 0.5);
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+.modal-content {
+  max-width: 600px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 150px auto;
+  background: white;
+  opacity: 0;
+  transform: translateY(-500px);
+  transition-duration: 0.6s;
+}
+.modal-content__header {
+  padding: 0 0 15px 5px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid lightgrey;
+  font-size: 1.1em;
+}
+.modal-content-close {
+  position: relative;
+  float: right;
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.modal-content-close:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 25px;
+  background: #bbbbbb;
+  transform: rotate(45deg);
+  transition-duration: 0.1s;
+}
+.modal-content-close:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 3px;
+  height: 25px;
+  background: #bbbbbb;
+  transform: rotate(-45deg);
+  transition-duration: 0.1s;
+}
+.modal-content-close:hover:before,
+.modal-content-close:hover:after {
+  background: #818181;
+  transition-duration: 0.1s;
+}
+.modal-content__text {
+  width: 100%;
+  margin-bottom: 30px;
+}
+.modal_open {
+  visibility: visible;
+}
+.modal_open .modal__background {
+  opacity: 1;
+  transition-duration: 0.4s;
+}
+.modal_open .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.4s;
+}
+@media screen and (max-height: 500px) {
+  .modal-content {
+    margin: 20px auto;
   }
 }
 .local-main {

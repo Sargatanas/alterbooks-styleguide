@@ -557,6 +557,37 @@
             </div>
         </div>
     </div>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 center-xs">
+                <div class="text__header text__header_2">
+                    Прелоадер
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 center-xs">
+                <div class="preloader__container">
+                    <div class="preloader-item preloader-item__1">
+                        <span class="preloader-item__text"></span>
+                        <span class="preloader-item__text preloader-item__text_1"></span>
+                    </div>
+                    <div class="preloader-item preloader-item__2">
+                        <span class="preloader-item__text"></span>
+                    </div>
+                    <div class="preloader-item preloader-item__3">
+                        <span class="preloader-item__text"></span>
+                        <span class="preloader-item__text preloader-item__text_2"></span>
+                    </div>
+                    <div class="preloader-item preloader-item__4">
+                        <span class="preloader-item__text"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row">
@@ -941,32 +972,74 @@
         <div class="row">
             <div class="col-xs-12 center-xs">
                 <div class="text__header text__header_2">
-                    Прелоадер
+                    Модальное окно
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 center-xs">
-                <div class="preloader__container">
-                    <div class="preloader-item preloader-item__1">
-                        <span class="preloader-item__text"></span>
-                        <span class="preloader-item__text preloader-item__text_1"></span>
+            <div class="col-xs-12 center-xs row">
+                <div class="col-xs-3 col-lg-6 col-md-12">
+                    <button class="button modal-button" data-modal-id="1">
+                        <span>Кнопка 1</span>
+                    </button>
+                </div>
+                <div class="col-xs-3 col-lg-6 col-md-12">
+                    <button class="button modal-button" data-modal-id="2">
+                        <span>Кнопка 2</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal" data-modal-id="1">
+            <div class="modal__background"></div>
+            <div class="modal-content">
+                <div class="modal-content__header">
+                    Заголовок модального окна 1
+                    <div class="modal-content-close" data-modal-id="1"></div>
+                </div>
+                <div class="modal-content__text">
+                    Тут располагается текст, касающийся содержания модального окна. Всякая всячина, не удаляйте меня,
+                    пожаааалуйста, например.
+                    <br><br>
+                    Вы точно сознаете всю ответственность сего шага?
+                </div>
+                <div class="row end-xs">
+                    <div class="col-xs-3 col-md-6">
+                        <button class="button button_red modal-close-button" data-type="simple" data-modal-id="1">
+                            <span>Удалить</span>
+                        </button>
                     </div>
-                    <div class="preloader-item preloader-item__2">
-                        <span class="preloader-item__text"></span>
+                </div>
+            </div>
+        </div>
+        <div class="modal" data-modal-id="2">
+            <div class="modal__background"></div>
+            <div class="modal-content">
+                <div class="modal-content__header">
+                    Заголовок модального окна 2
+                    <div class="modal-content-close" data-modal-id="2"></div>
+                </div>
+                <div class="modal-content__text">
+                    Тут располагается текст, касающийся содержания модального окна. Всякая всячина, не удаляйте меня,
+                    пожаааалуйста, например.
+                    <br><br>
+                    Вы точно сознаете всю ответственность сего шага?
+                </div>
+                <div class="row end-xs">
+                    <div class="col-xs-4 col-md-6">
+                        <button class="button modal-close-button" data-type="simple" data-modal-id="2">
+                            <span>Не удалять!</span>
+                        </button>
                     </div>
-                    <div class="preloader-item preloader-item__3">
-                        <span class="preloader-item__text"></span>
-                        <span class="preloader-item__text preloader-item__text_2"></span>
-                    </div>
-                    <div class="preloader-item preloader-item__4">
-                        <span class="preloader-item__text"></span>
+                    <div class="col-xs-3 col-md-6">
+                        <button class="button button_red modal-close-button" data-type="simple" data-modal-id="2">
+                            <span>Удалить</span>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </main>
 
 <footer></footer>
@@ -974,5 +1047,6 @@
 <script src="js/ripple.js"></script>
 <script src="js/input.js"></script>
 <script src="js/menu.js"></script>
+<script src="js/modal.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 let buttons = document.getElementsByClassName('button');
 
 Array.prototype.forEach.call(buttons, function (b) {
-    if (b.tagName === 'BUTTON') {
+    if ((b.tagName === 'BUTTON') && (b.dataset.type !== "simple")) {
         if (b.dataset.default !== 'true') {
             b.addEventListener('mousedown', createRipple);
             // b.addEventListener('mouseup', deleteRipple);
