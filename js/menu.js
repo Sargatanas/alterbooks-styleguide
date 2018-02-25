@@ -46,7 +46,6 @@ Array.prototype.forEach.call(menu_inner, function (m) {
             count++;
         }
     }
-    console.log(count);
 
     let selected = false;
     for (let i = 0; i < inner_content.childNodes.length; i++) {
@@ -60,14 +59,18 @@ Array.prototype.forEach.call(menu_inner, function (m) {
     if(selected) {
         m.classList.add('menu-element__href_active');
         inner_content.style.height = String(count * 40 + 20) + 'px';
+        inner_content.style.opacity = '1';
+        arrow.style.transform = 'rotate(180deg)';
     } else {
         m.addEventListener('click', function () {
             m.classList.toggle('menu-element__href_active');
             if (m.classList.contains('menu-element__href_active')) {
                 inner_content.style.height = String(count * 40 + 20) + 'px';
+                inner_content.style.opacity = '1';
                 arrow.style.transform = 'rotate(180deg)';
             } else {
                 inner_content.style.height = '0';
+                inner_content.style.opacity = '0';
                 arrow.style.transform = 'rotate(0deg)';
             }
         });

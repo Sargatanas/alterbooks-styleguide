@@ -1,0 +1,105 @@
+@preloader-width: 30px;
+@preloader-height: 40px;
+
+.preloader {
+    &__container {
+        position: relative;
+        width: @preloader-width * 2 + 5px;
+        height: @preloader-height * 2 + 5px;
+        margin: auto;
+    }
+
+    &-item {
+        position: absolute;
+        width: @preloader-width;
+        height: @preloader-height;
+
+        &__1 {
+            top: 0;
+            left: 0;
+            z-index: 1;
+            box-sizing: border-box;
+            border-left: 5px solid #FA5667;
+            background-color: #fac0d2;
+            animation: item-1_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+        }
+
+        &__2 {
+            top: 0;
+            right: 0;
+            box-sizing: border-box;
+            border-left: 5px solid #7A45E5;
+            background-color: #c0b1e5;
+            animation: item-2_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+        }
+
+        &__3 {
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            box-sizing: border-box;
+            border-left: 5px solid #1B91F7;
+            background-color: #bfd2f7;
+            animation: item-3_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+        }
+
+        &__4 {
+            bottom: 0;
+            left: 0;
+            box-sizing: border-box;
+            border-left: 5px solid #d8993e;
+            background-color: #FAC24C;
+            animation: item-4_move 1.8s cubic-bezier(.6,.01,.4,1) infinite;
+        }
+
+        &__text {
+            display: block;
+            width: 15px;
+            height: 3px;
+            margin-top: 15px;
+            margin-left: 5px;
+            background: white;
+
+            &_1 {
+                width: 11px;
+                margin-top: 3px;
+                margin-left: 7px;
+            }
+
+            &_2 {
+                width: 9px;
+                margin-top: 3px;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+@keyframes item-1_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(0, @preloader-height + 5px)}
+    50% {transform: translate(@preloader-width + 5px, @preloader-height + 5px)}
+    75% {transform: translate(@preloader-width + 5px, 0)}
+}
+
+@keyframes item-2_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(-@preloader-width - 5px, 0)}
+    50% {transform: translate(-@preloader-width - 5px, @preloader-height + 5px)}
+    75% {transform: translate(0, @preloader-height + 5px)}
+}
+
+@keyframes item-3_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(0, -@preloader-height - 5px)}
+    50% {transform: translate(-@preloader-width - 5px, -@preloader-height - 5px)}
+    75% {transform: translate(-@preloader-width - 5px, 0)}
+}
+
+@keyframes item-4_move {
+    0%, 100% {transform: translate(0, 0)}
+    25% {transform: translate(@preloader-width + 5px, 0)}
+    50% {transform: translate(@preloader-width + 5px, -@preloader-height - 5px)}
+    75% {transform: translate(0, -@preloader-height - 5px)}
+}
