@@ -1738,7 +1738,7 @@ form {
   bottom: 0;
   left: 0;
   box-sizing: border-box;
-  border-left: 5px solid #d8993e;
+  border-left: 5px solid #d6983d;
   background-color: #FAC24C;
   animation: item-4_move 1.8s cubic-bezier(0.6, 0.01, 0.4, 1) infinite;
 }
