@@ -14,6 +14,13 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 center-xs">
+                <a href="alarm/index.html">БУДИЛЬНИК!!!</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 center-xs">
                 <div class="text__header">
                     Заголовок
                 </div>
