@@ -1,7 +1,11 @@
 .button {
     overflow: hidden;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    min-width: 50px;
     width: 100%;
     min-height: 40px;
 
@@ -39,16 +43,6 @@
     }
 
 
-    &_default {
-        color: lightgrey;
-        border: 1px solid #e8e8e8;
-        cursor: auto;
-
-        &:hover {
-            background: white;
-        }
-    }
-
     &_green {
         background: #5ea844;
         border: none;
@@ -67,5 +61,19 @@
         &:hover {
             background: #f9844e;
         }
+    }
+
+    &_default {
+        color: lightgrey;
+        border: 1px solid #e8e8e8;
+        cursor: auto;
+
+        &:hover {
+            background: white;
+        }
+    }
+
+    &_icon {
+        border-radius: 5px;
     }
 }
